@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Verzeo Survey Form</title>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1 id="title">Survey Form</h1>
+    </div>
+    <form id="survey-form">
+
+      <div class="form-group">
+        <label id="name-label" for="name">Name</label>
+        <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required/>
+      </div>
+
+      <div class="form-group">
+        <label id="email-label" for="email">Email</label>
+        <input type="email" name="email" id="email" class="form-control" placeholder="Enter your Email" required/>
+      </div>
+
+      <div class="form-group">
+        <p>Whats your current profession?</p>
+        <select id="dropdown" name="profession" class="form-control" required>
+          <option disabled selected value>Select current profession</option>
+          <option value="student">Student</option>
+          <option value="teacher">Teacher</option>
+          <option value="coaching">Private Coaching</option>
+          <option value="preferNo">Prefer not to say</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label id="date-label" for="number">Date of Birth</label>
+        <input type="date" name="date" id="date" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <p>Would you recommend Verzeo to a friend?</p>
+        <label>
+          <input name="user-recommend" value="definitely" type="radio" class="input-radio" checked/>Definitely
+        </label>
+        <label>
+          <input name="user-recommend" value="maybe" type="radio"class="input-radio"/>Maybe
+        </label>
+        <label>
+          <input name="user-recommend" value="not-sure" type="radio" class="input-radio"/>Not sure
+        </label>
+      </div>
+
+      <div class="form-group">
+        <p>What do you like about us?</p>
+        <select id="most-like" name="mostLike" class="form-control" required>
+          <option disabled selected value>Select an option</option>
+          <option value="method">Teaching method</option>
+          <option value="projects">Projects</option>
+          <option value="content">Content</option>
+          <option value="support">Support</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <p>Any comments or suggestions?</p>
+        <textarea id="comments" class="input-textarea" name="comment" placeholder="Honest review will be appreciated..."></textarea>
+      </div>
+  
+      <div class="form-group">
+        <button type="submit" id="submit" class="submit-button">
+          Submit
+        </button>
+      </div>
+
+    </form>
+  </div>
+</body>
+</html>
