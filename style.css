@@ -1,3 +1,6 @@
+/******************************
+***** Universal Selectors *****
+******************************/
 *,
 *::before,
 *::after {
@@ -9,42 +12,52 @@
 html {
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  font-size: 62.5%;
+}
+
+@media (max-width: 768px) {
+  html { font-size: 57%; }
+}
+
+@media (max-width: 576px) {
+  html { font-size: 54%; }
+}
+
+@media (max-width: 480px) {
+  html { font-size: 50%; }
 }
 
 body {
-  font-size: 1rem;
+  font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.4;
-  color: #f3f3f3;
-  background: #ebebec;
-}
-
-#title {
   color: #1b1b32;
-  text-align: center;
+  background: rgba(27, 27, 50, 1);
 }
 
+
+/************************
+***** Tag Selectors *****
+************************/
 h1 {
   font-weight: 400;
   line-height: 1.2;
   font-weight: 600;
-}
-
-p {
-  font-size: 1.2rem;
-}
-
-h1,
-p {
   margin-top: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
+}
+
+p {
+  font-size: 1.9rem;
+  margin-top: 0;
+  margin-bottom: 0.8rem;
 }
 
 label {
   display: flex;
   align-items: center;
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.92rem;
+  margin-bottom: 0.8rem;
 }
 
 input,
@@ -61,8 +74,12 @@ button {
   border: none;
 }
 
+
+/********************
+***** Container *****
+********************/
 .container {
-  margin: 3rem auto 0 auto;
+  margin: 4.8rem auto 0 auto;
   max-width: 720px;
 }
 
@@ -78,82 +95,100 @@ button {
   }
 }
 
+
+/*****************
+***** Header *****
+*****************/
 .header {
-  padding: 0 0.625rem;
-  margin-bottom: 1.9rem;
+  padding: 0 1rem;
+  margin-bottom: 3rem;
+  color: #f3f3f3;
+  text-align: center;
 }
 
+
+/***************
+***** Form *****
+***************/
 form {
-  background: rgba(27, 27, 50, 0.8);
-  padding: 2.5rem;
-  border-radius: 0.25rem;
+  background: #ebebec;
+  padding: 4rem;
+  border-radius: .4rem;
 }
 
 @media (max-width: 480px) {
   form {
-    padding: 2.5rem 0.62rem;
+    padding: 4rem 1rem;
   }
 }
 
 .form-group {
-  margin: 0 auto 1.25rem auto;
-  padding: 0.25rem;
+  margin: 0 auto 2rem auto;
+  padding: .4rem;
 }
 
 .form-control {
   display: block;
   width: 100%;
-  height: 2.4rem;
-  padding: 0.38rem 0.8rem;
+  height: 3.8rem;
+  padding: .6rem 1.3rem;
   color: #495057;
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid #ced4da;
-  border-radius: 0.25rem;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  border-radius: .4rem;
+  transition: all 0.15s ease-in-out;
 }
 
 .form-control:focus {
   border-color: #80bdff;
   outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  box-shadow: 0 0 0 0.3rem rgba(0, 123, 255, 0.25);
 }
 
-.input-radio,
+.input-radio{
+  display: inline-block;
+  margin-right: 1rem;
+  min-height: 2rem;
+  min-width: 2rem;
+}
+
 .input-checkbox {
   display: inline-block;
-  margin-right: 0.625rem;
-  min-height: 1.25rem;
-  min-width: 1.25rem;
+  margin-right: 1rem;
+  height: 1.7rem;
+  width: 1.7rem;
 }
 
 .input-textarea {
   min-height: 120px;
   width: 100%;
-  padding: 0.625rem;
+  padding: 1rem;
   resize: vertical;
 }
 
 .submit-button {
   display: block;
   width: 100%;
-  padding: 0.75rem;
+  padding: 1.2rem;
   background: #37af65;
   color: inherit;
   border-radius: 2px;
   cursor: pointer;
 }
 
-body {
-  background: rgba(27, 27, 50, 0.8) !important;
-  color: #1b1b32 !important;
-  background: #ebebec;
-}
 
-h1 {
-  color: #f3f3f3 !important;
-}
-
-form {
-  background: #ebebec !important;
+/********************
+***** Submission ****
+********************/
+.submit-container {
+  text-transform: uppercase;
+  background-color: #f3f3f3;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem;
+  text-align: center;
+  border-radius: 7px;
 }

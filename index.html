@@ -12,7 +12,7 @@
     <div class="header">
       <h1 id="title">Survey Form</h1>
     </div>
-    <form id="survey-form">
+    <form action="index2.html" id="survey-form">
 
       <div class="form-group">
         <label id="name-label" for="name">Name<sup>*</sup></label>
@@ -37,12 +37,12 @@
       </div>
 
       <div class="form-group">
-        <label id="date-label" for="number">Date of Birth</label>
-        <input type="date" name="date" id="date" class="form-control">
+        <label id="date-label" for="number">Date of Birth<sup>*</sup></label>
+        <input type="date" name="date" id="date" class="form-control" required>
       </div>
 
       <div class="form-group">
-        <p>Would you recommend Verzeo to a friend?</p>
+        <p>Would you recommend Verzeo to a friend?<sup>*</sup></p>
         <label>
           <input name="user-recommend" value="definitely" type="radio" class="input-radio" checked/>Definitely
         </label>
@@ -55,14 +55,11 @@
       </div>
 
       <div class="form-group">
-        <p>What do you like about us?<sup>*</sup></p>
-        <select id="most-like" name="mostLike" class="form-control" required>
-          <option disabled selected value>Select an option</option>
-          <option value="method">Teaching method</option>
-          <option value="projects">Projects</option>
-          <option value="content">Content</option>
-          <option value="support">Support</option>
-        </select>
+        <p>What do you like about us?</p>
+        <label><input type="checkbox" name="like" id="like1" class="input-checkbox">Teaching method</label>
+        <label><input type="checkbox" name="like" id="like2" class="input-checkbox">Projects</label>
+        <label><input type="checkbox" name="like" id="like3" class="input-checkbox">Content</label>
+        <label><input type="checkbox" name="like" id="like4" class="input-checkbox">Support</label>
       </div>
 
       <div class="form-group">
@@ -71,9 +68,7 @@
       </div>
   
       <div class="form-group">
-        <button type="submit" id="submit" class="submit-button">
-          Submit
-        </button>
+        <button type="submit" id="submit" class="submit-button"> Submit </button>
       </div>
 
     </form>
